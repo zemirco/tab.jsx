@@ -1,7 +1,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Router, Route, browserHistory, withRouter} from 'react-router'
+import {Router, Route, hashHistory, withRouter} from 'react-router'
 import Tab from '../'
 
 class App extends React.Component {
@@ -33,7 +33,7 @@ class App extends React.Component {
 }
 
 ReactDOM.render((
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path='/' component={withRouter(App)} />
   </Router>
 ), document.getElementById('app'))

@@ -23,10 +23,22 @@ class App extends React.Component {
     const href = `${pathname}${search}`
     this.state.tabs.map(tab => { tab.active = tab.href === href })
     return (
-      <Tab
-        tabs={this.state.tabs}
-        onClick={this.onClick}
-      />
+      <div>
+        <section>
+          <Tab
+            tabs={this.state.tabs}
+            onClick={this.onClick}
+          />
+        </section>
+        <section>
+          <p>with custom class</p>
+          <Tab
+            className='nav-grey'
+            tabs={this.state.tabs}
+            onClick={this.onClick}
+          />
+        </section>
+      </div>
     )
   }
 

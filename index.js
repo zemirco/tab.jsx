@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-const Tab = ({tabs, onClick, className, style}) => (
+const Tab = ({tabs, onClick, className, style, children}) => (
   <ul className={`nav nav-tabs${className ? ` ${className}` : ''}`} style={style}>
     {tabs.map((tab, i) =>
       <li key={i} className={tab.active ? 'active' : null}>
@@ -10,6 +10,7 @@ const Tab = ({tabs, onClick, className, style}) => (
         </a>
       </li>
     )}
+    {children}
   </ul>
 )
 

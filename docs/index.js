@@ -38,6 +38,25 @@ class App extends React.Component {
             onClick={this.onClick}
           />
         </section>
+        <section>
+          <p>with children</p>
+          <Tab
+            tabs={this.state.tabs}
+            onClick={this.onClick}
+          >
+            <div className="hidden-xs btn-group pull-right">
+              <a href="#" className="btn btn-default active">
+                One
+              </a>
+              <a href="#" className="btn btn-default ">
+                Two
+              </a>
+              <a href="#" className="btn btn-default ">
+                Three
+              </a>
+            </div>
+          </Tab>
+        </section>
       </div>
     )
   }

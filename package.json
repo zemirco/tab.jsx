@@ -28,5 +28,8 @@
   },
   "standard": {
     "parser": "babel-eslint"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
